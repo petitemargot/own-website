@@ -1,0 +1,218 @@
+@charset "utf-8";
+@import "variables";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #161616;
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: $color-floral-white;
+  position: relative;
+  background-image: url("images/mads-schmidt-rasmussen-6YmzwamGzCg-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: $font-main;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 50px;
+    background-color: $color-shadow-blue;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+  }
+
+  .menu {
+    display: flex;
+
+    li {
+      a {
+        padding: 10px 15px;
+        color: $color-dark-blue;
+        font-size: 12px;
+
+        &:hover, &.active {
+          color: $color-white !important;
+          font-weight: 700;
+          transition: all ease 0.4s;
+        }
+      }
+    }
+  }
+
+  .lang {
+    color: $color-dark-grey;
+  }
+
+  .logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: $color-dark-grey;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .name {
+    font-family: $font-main;
+    width: 500px;
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translate(-20%, -50%);
+
+    p:nth-child(1), .details {
+      color: $color-dark-blue;
+      font-size: 14px;
+    }
+
+    h1 {
+      font-family: $font-main;
+      font-size: 40px;
+      margin: 0;
+      letter-spacing: 2px;
+      color: $color-dark-grey;
+
+      span {
+        color: $color-opal !important;
+      }
+    }
+
+    .cv-btn {
+      width: 200px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $color-dark-grey;
+      color: $color-white;
+
+      &:hover {
+        background-color: $color-white;
+        color: $color-dark-grey;
+
+      }
+    }
+  }
+
+  .social {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    display: flex;
+
+    a {
+      margin: 6px 12px;
+
+      &:hover i {
+        color: $color-opal;
+        transition: all ease 0.5s;
+      }
+    }
+
+    i {
+      color: rgba(18, 17, 17, 0.4);
+      font-size: 16px;
+    }
+  }
+
+}
+
+#about {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 5% 0;
+
+  .about-text {
+    font-family: $font-main;
+    width: 50%;
+
+    h1 {
+      font-size: 30px;
+      color: $color-opal;
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+      font-size: 16px;
+      color: $color-floral-white;
+    }
+  }
+
+  .about-image {
+    img {
+      margin: auto 50px;
+      width: 35%;
+    }
+  }
+}
+
+#skills {
+  width: 100%;
+  height: 100vh;
+  font-family: $font-main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+
+  .skills-heading {
+    text-align: center;
+    margin: 20px 0;
+
+    h1, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      color: $color-white;
+      font-size: 30px;
+    }
+
+    p {
+      color: $color-floral-white;
+      font-size: 16px;
+    }
+  }
+  .skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-box {
+      background-color: $color-dark-grey;
+      width: 350px;
+      height: 500px;
+      margin: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 2px 2px 12px $color-dark-grey;
+    }
+  }
+}
