@@ -234,4 +234,27 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 
+#portfolio {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: source-code-pro, monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 60px 2% 20px;
+}
+#portfolio .portfolio-heading {
+  font-family: source-code-pro, monospace;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+  padding: 10px 20px;
+  background-color: #2C2E3A;
+  letter-spacing: 2px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+}
+
 /*# sourceMappingURL=main.css.map */

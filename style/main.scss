@@ -276,3 +276,26 @@ body {
     }
   }
 }
+
+#portfolio {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: $font-main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 60px 2% 20px;
+  .portfolio-heading {
+    font-family: $font-main;
+    font-size: 20px;
+    text-align: center;
+    color: $color-white;
+    font-weight: 400;
+    padding: 10px 20px;
+    background-color: $color-dark-grey;
+    letter-spacing: 2px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+  }
+}
