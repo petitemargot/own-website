@@ -241,12 +241,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   padding: 60px 2% 20px;
 }
 #portfolio .portfolio-heading {
   font-family: source-code-pro, monospace;
-  font-size: 20px;
+  font-size: 1.7rem;
   text-align: center;
   color: #fff;
   font-weight: 400;
@@ -255,6 +255,205 @@ body {
   letter-spacing: 2px;
   border-radius: 3px;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+}
+#portfolio .portfolio-container {
+  width: 90%;
+  height: 70vh;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+#portfolio .portfolio-container-box {
+  background-color: #1f1f1f;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+#portfolio .portfolio-container-box .text-overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: source-code-pro, monospace;
+  background-color: #92B6B1;
+}
+#portfolio .portfolio-container-box .text-overlay h2, #portfolio .portfolio-container-box .text-overlay p {
+  color: #fff;
+}
+#portfolio .portfolio-container-box .text-overlay h2 {
+  font-size: 2.2rem;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 2px;
+}
+#portfolio .portfolio-container-box .text-overlay p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+#portfolio .portfolio-container-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#portfolio .portfolio-container-box:hover .text-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-btn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: #F4F7FF;
+  margin: 20px 0;
+  box-sizing: border-box;
+  box-shadow: 2px 0 20px rgba(0, 0, 0, 0.4);
+}
+#contact-btn .contact-btn-heading {
+  font-size: 2rem;
+  color: #666a86;
+  font-family: source-code-pro, monospace;
+  margin: 10px;
+  padding: 5px;
+  letter-spacing: 4px;
+  border-bottom: 2px solid #666a86;
+}
+#contact-btn button {
+  color: #fff;
+  font-size: 1rem;
+  font-family: source-code-pro, monospace;
+  width: 150px;
+  height: 40px;
+  margin: 10px;
+  background-color: #92B6B1;
+  border: none;
+  outline: none;
+  box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.2);
+}
+#contact-btn button:hover {
+  background-color: #92B6B1;
+  color: #2C2E3A;
+  transition: all ease 0.5s;
+  font-weight: bold;
+}
+
+#contact-form {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact-form .contact {
+  display: flex;
+  width: 70%;
+  height: 60vh;
+  background-color: #2C2E3A;
+  box-shadow: 2px 12px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.01);
+}
+#contact-form .contact-left {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contact-form .contact-left-heading {
+  font-family: source-code-pro, monospace;
+  color: #fff;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+#contact-form .contact-left-heading span {
+  border-bottom: 3px solid #92B6B1;
+}
+#contact-form .contact-right {
+  width: 60%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+#contact-form .contact-right button {
+  width: 100%;
+  height: 50px;
+  background-color: #92B6B1;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  margin: 0;
+  color: #1B1B1B;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+#contact-form .contact-right button:active {
+  transform: scale(1.04);
+  transition: all ease 0.1s;
+}
+#contact-form .contact-right textarea {
+  width: 100% !important;
+  height: 320px !important;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  box-sizing: border-box;
+  color: #faf8ef;
+  font-size: 16px;
+}
+#contact-form .contact-right textarea::placeholder {
+  color: #EBEBEB;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: source-code-pro, monospace;
+}
+#contact-form .contact-right .message {
+  margin: 20px;
+}
+#contact-form .contact-right .message span {
+  font-size: 18px;
+  color: #4E4E4E;
+  font-family: source-code-pro, monospace;
+}
+#contact-form .form-name, #contact-form .form-email {
+  display: flex;
+  flex-direction: column;
+  font-family: source-code-pro, monospace;
+}
+#contact-form .form-name span, #contact-form .form-email span {
+  color: #faf8ef;
+  font-size: 22px;
+}
+#contact-form .form-name input, #contact-form .form-email input {
+  height: 30px;
+  width: 250px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid #666a86;
+  color: #fff;
+  margin: 10px 0;
+}
+#contact-form .form-name input::placeholder, #contact-form .form-email input::placeholder {
+  opacity: 0.5;
+  letter-spacing: 1px;
+}
+#contact-form .form-name input:focus, #contact-form .form-email input:focus {
+  border-bottom: 1px solid #92B6B1;
+  transition: all ease 0.5s;
 }
 
 /*# sourceMappingURL=main.css.map */
