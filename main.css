@@ -4,6 +4,10 @@ body {
   background-color: #161616;
 }
 
+html {
+  scroll-behavior: auto;
+}
+
 #main {
   width: 100%;
   height: 100vh;
