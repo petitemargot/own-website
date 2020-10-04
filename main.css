@@ -1,3 +1,77 @@
+@charset "UTF-8";
+@media (max-width: 1240px) {
+  #main {
+    background-size: 1200px;
+  }
+  #main .main {
+    left: 10%;
+    top: 50%;
+    transform: translate(-10%, -50%);
+  }
+
+  #about {
+    height: auto !important;
+  }
+  #about .about-image img {
+    width: 50% !important;
+  }
+
+  #skills {
+    height: auto !important;
+    padding-bottom: 40px !important;
+  }
+  #skills .skills-container {
+    flex-wrap: wrap;
+  }
+  #skills .skills-container-box {
+    flex-grow: 1;
+  }
+  #skills .skills-container-box--text {
+    text-align: center;
+  }
+
+  #contact-form form {
+    width: 90% !important;
+  }
+}
+@media (max-width: 768px) {
+  #main {
+    background-image: none !important;
+  }
+  #main .toggle {
+    display: block !important;
+  }
+  #main .toggle:before {
+    content: "";
+    font-family: source-code-pro, monospace;
+  }
+  #main .toggle.active:before {
+    content: "" !important;
+  }
+  #main .name {
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  #about {
+    justify-content: center !important;
+    padding-top: 0 !important;
+  }
+  #about .about-image {
+    display: none !important;
+  }
+  #about .about-text {
+    width: 90% !important;
+  }
+  #about .about-text h1 {
+    font-size: 3rem !important;
+  }
+
+  #portfolio .portfolio-container {
+    width: 100% !important;
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -5,7 +79,7 @@ body {
 }
 
 html {
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
 }
 
 #main {
@@ -18,6 +92,9 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
+#main a {
+  text-decoration: none;
 }
 #main nav {
   display: flex;
@@ -37,32 +114,32 @@ html {
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.05);
   z-index: 1;
 }
-#main .menu {
+#main nav .toggle {
+  display: none;
+}
+#main nav .menu {
   display: flex;
 }
-#main .menu li a {
+#main nav .menu li a {
   padding: 10px 15px;
   color: #666a86;
   font-size: 12px;
 }
-#main .menu li a:hover, #main .menu li a.active {
+#main nav .menu li a:hover, #main nav .menu li a.active {
   color: #fff !important;
   font-weight: 700;
   transition: all ease 0.4s;
 }
-#main .lang {
+#main nav .lang {
   color: #2C2E3A;
 }
-#main .logo {
+#main nav .logo {
   font-size: 25px;
   font-weight: bold;
   color: #2C2E3A;
 }
-#main ul {
+#main nav ul {
   list-style: none;
-}
-#main a {
-  text-decoration: none;
 }
 #main .name {
   font-family: source-code-pro, monospace;
@@ -296,7 +373,13 @@ html {
 }
 #portfolio .portfolio-container-box .text-overlay p {
   font-size: 1.2rem;
-  margin: 0;
+  margin: 10px;
+}
+#portfolio .portfolio-container-box .text-overlay a {
+  padding: 5px;
+  color: #666a86;
+  font-size: 1rem;
+  text-decoration: none;
 }
 #portfolio .portfolio-container-box img {
   width: 100%;
@@ -425,7 +508,7 @@ html {
   font-family: source-code-pro, monospace;
 }
 #contact-form .contact-right .message {
-  margin: 20px;
+  margin: 10px 20px;
 }
 #contact-form .contact-right .message span {
   font-size: 18px;
